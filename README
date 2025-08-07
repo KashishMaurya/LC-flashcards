@@ -1,99 +1,129 @@
-LeetCode Flashcards - Your Coding Interview Prep Companion
-A simple yet powerful flashcard app built with Python to help you practice and master LeetCode-style coding problems for technical interviews using a spaced repetition approach.
+💡 LeetCode Flashcards - Your Coding Interview Prep Companion
+A simple yet powerful flashcard app built in Python to help you practice and master LeetCode-style coding problems using a spaced repetition approach. Ideal for coding interviews, daily practice, or building muscle memory around common problem patterns.
 
-Features
-LeetCode-style cards: Each card shows problem title, description, example, constraints, solution hints, and more.
+🚀 Features
+✅ LeetCode-style flashcards: Each card contains a full problem description, sample input/output, constraints, and detailed hints.
 
-Spaced repetition: Problems marked unsolved appear more frequently; solved problems appear less.
+🔁 Spaced repetition: Unsolved problems appear more frequently; solved ones appear less often.
 
-Track progress: Stats saved in a CSV file updated on every run, showing solved/unsolved problems by date.
+📊 Progress tracking: Automatically logs daily stats (solved/unsolved) to a CSV file.
 
-Customizable data: Add your own problems by editing a JSON file.
+✍️ Customizable: Easily edit the JSON file to add your own problems or topics.
 
-Easy UI: Tkinter-based graphical interface; flip cards to see solutions.
+🖼️ User-friendly GUI: Built with Tkinter. Click to flip cards and view solutions.
 
-Getting Started
-Prerequisites
+🧰 Getting Started
+✅ Prerequisites
 Python 3.7+
 
-Libraries: tkinter (usually pre-installed), pandas
+Libraries:
+
+tkinter (usually pre-installed)
+
+pandas
+
+Install required library:
 
 bash
+Copy
+Edit
 pip install pandas
-Setup
-Clone or download the project files.
+📦 Setup
+Clone or download this repository.
 
-JSON data file (lc_flashcards.json) contains your flashcard problems.
+Ensure the file lc_flashcards.json is present. This contains your flashcard data.
 
-Run the main Python script (flashcards_app.py).
-
-Usage
-Launch the app by running:
+Run the app:
 
 bash
+Copy
+Edit
 python flashcards_app.py
-The app shows one flashcard at a time with problem details.
+🕹️ How to Use
+The app displays one flashcard at a time:
 
-Click Show Solution to view hints and solution.
+Front: title, description, example, constraints.
 
-Click Solved (Yes) if you solved it; the card will appear less frequently next time.
+Back: solution hints, difficulty, topics, and LeetCode number.
 
-Click Unsolved (No) if you couldn’t solve it; the card will repeat more often.
+Click "Show Solution" to flip the card.
 
-Your progress is saved in lc_stats.csv, which records daily solved and unsolved problems.
+Click:
 
-Close the app when done; rerun anytime to continue practicing.
+"Solved (Yes)" if you solved it → appears less often in future.
 
-Customizing Your Flashcards
-Add or Edit Problems
-Open the lc_flashcards.json file.
+"Unsolved (No)" if you didn't → appears more frequently.
 
-Each problem is a JSON object with these fields:
+Stats are saved daily in lc_stats.csv.
+
+🛠️ Customizing Your Flashcards
+✏️ Add or Edit Problems
+Open the file lc_flashcards.json and use the format below:
 
 json
+Copy
+Edit
 {
   "title": "Problem Title",
   "description": "Full problem description.",
-  "example": "Input/Output examples.",
-  "constraints": "Constraints for the problem.",
-  "solution": "Brief solution approach or explanation.",
-  "lc_number": "LeetCode problem number as string.",
-  "level": "Difficulty level (Easy, Medium, Hard).",
-  "topics": ["Array", "String", ...],
-  "hints": "Helpful hints to solve the problem."
+  "example": "Input and output example.",
+  "constraints": ["Constraint 1", "Constraint 2"],
+  "solution": "Brief explanation or steps to solve.",
+  "lc_number": "1",
+  "level": "Easy",
+  "topics": ["Array", "Hash Map"],
+  "hints": ["Use a dictionary", "Think about complements"]
 }
-Add new objects or modify existing ones to tailor your study set.
+Add as many problems as you'd like to grow your personal problem set!
 
-Adjust Repetition Weights
-In the Python script, locate:
+🎚️ Adjust Repetition Frequency
+In the Python script, modify these values to control how often a card repeats:
 
 python
-NO_WEIGHT = 5    # Frequency multiplier for unsolved cards
-YES_WEIGHT = 2   # Frequency multiplier for solved cards
-Increase/decrease these numbers to control how often unsolved or solved cards appear.
+Copy
+Edit
+NO_WEIGHT = 5    # For unsolved problems
+YES_WEIGHT = 2   # For solved problems
+🎨 Customize UI
+Edit the Tkinter GUI section to change:
 
-Style Changes
-Modify colors, fonts, and layout in the Tkinter GUI section to personalize your flashcard look.
+Fonts, sizes, padding
 
-How It Works Internally
-On startup, the app loads flashcards from the JSON and user stats from the CSV.
+Colors (background, buttons)
 
-Each card’s repetition count is adjusted based on whether it's been solved or not.
+Window size and layout
 
-Cards are randomly shuffled but weighted, so hard problems show up more frequently.
+⚙️ How It Works
+On startup:
 
-The app tracks daily progress, and stats reset each day to allow fresh sessions.
+Loads problems from lc_flashcards.json.
 
-Tips for Effective Use
-Be honest when marking solved or unsolved.
+Applies weighting based on prior performance.
 
-Consistently review to reinforce learning.
+Loads progress stats from lc_stats.csv or starts fresh.
 
-Use the hints and solutions to understand problem-solving approaches.
+During use:
 
-Customize your problem set as you grow, adding new challenges or review topics.
+Cards are shown in a randomized, weighted order.
 
-License & Contributions
-This is an open project inspired by LeetCode-style interview prep. Feel free to fork, customize, and improve!
+Clicking Yes/No adjusts future appearances of the card.
 
-Feel free to ask for help or more features!
+Daily progress is saved automatically.
+
+Each day starts a new stats entry for fresh tracking.
+
+💡 Tips for Best Use
+Be honest when marking cards "Solved" or "Unsolved".
+
+Make it a daily habit — consistency boosts retention.
+
+Study topics you're weak in by reviewing hints and solutions.
+
+Add problems you encounter in practice, contests, or interviews.
+
+🤝 Contributing
+This is an open-source project inspired by the need for effective LeetCode practice.
+Feel free to fork, improve, and share!
+
+📄 License
+MIT License. Use freely for personal or professional learning.
