@@ -1,68 +1,72 @@
-💡 LeetCode Flashcards - Your Coding Interview Prep Companion
-A simple yet powerful flashcard app built in Python to help you practice and master LeetCode-style coding problems using a spaced repetition approach. Ideal for coding interviews, daily practice, or building muscle memory around common problem patterns.
 
-🚀 Features
-✅ LeetCode-style flashcards: Each card contains a full problem description, sample input/output, constraints, and detailed hints.
+# 💡 LeetCode Flashcards - Your Coding Interview Prep Companion
 
-🔁 Spaced repetition: Unsolved problems appear more frequently; solved ones appear less often.
+A simple yet powerful flashcard app built in Python to help you practice and master LeetCode-style coding problems using a **spaced repetition** approach. Ideal for coding interviews, daily practice, or building muscle memory around common problem patterns.
 
-📊 Progress tracking: Automatically logs daily stats (solved/unsolved) to a CSV file.
+---
 
-✍️ Customizable: Easily edit the JSON file to add your own problems or topics.
+## 🚀 Features
 
-🖼️ User-friendly GUI: Built with Tkinter. Click to flip cards and view solutions.
+- ✅ **LeetCode-style flashcards**: Each card contains a full problem description, sample input/output, constraints, and detailed hints.
+- 🔁 **Spaced repetition**: Unsolved problems appear more frequently; solved ones appear less often.
+- 📊 **Progress tracking**: Automatically logs daily stats (solved/unsolved) to a CSV file.
+- ✍️ **Customizable**: Easily edit the JSON file to add your own problems or topics.
+- 🖼️ **User-friendly GUI**: Built with Tkinter. Click to flip cards and view solutions.
 
-🧰 Getting Started
-✅ Prerequisites
-Python 3.7+
+---
 
-Libraries:
+## 🧰 Getting Started
 
-tkinter (usually pre-installed)
+### ✅ Prerequisites
 
-pandas
+- Python 3.7+
+- Libraries:
+  - `tkinter` (usually pre-installed)
+  - `pandas`
+
+### 📦 Setup
 
 Install required library:
 
-bash
-Copy
-Edit
+```bash
 pip install pandas
-📦 Setup
-Clone or download this repository.
+```
 
-Ensure the file lc_flashcards.json is present. This contains your flashcard data.
+1. Clone or download this repository.
+2. Ensure the file `lc_flashcards.json` is present. This contains your flashcard data.
+3. Run the app:
 
-Run the app:
-
-bash
-Copy
-Edit
+```bash
 python flashcards_app.py
-🕹️ How to Use
+```
+
+---
+
+## 🕹️ How to Use
+
 The app displays one flashcard at a time:
 
-Front: title, description, example, constraints.
+- **Front**: title, description, example, constraints.
+- **Back**: solution hints, difficulty, topics, and LeetCode number.
 
-Back: solution hints, difficulty, topics, and LeetCode number.
-
-Click "Show Solution" to flip the card.
+Click **"Show Solution"** to flip the card.
 
 Click:
 
-"Solved (Yes)" if you solved it → appears less often in future.
+- ✅ **Solved (Yes)** → appears less often in future.
+- ❌ **Unsolved (No)** → appears more frequently.
 
-"Unsolved (No)" if you didn't → appears more frequently.
+Your progress is saved daily in `lc_stats.csv`.
 
-Stats are saved daily in lc_stats.csv.
+---
 
-🛠️ Customizing Your Flashcards
-✏️ Add or Edit Problems
-Open the file lc_flashcards.json and use the format below:
+## 🛠️ Customizing Your Flashcards
 
-json
-Copy
-Edit
+### ✏️ Add or Edit Problems
+
+Open the file `lc_flashcards.json` and use the format below:
+
+```json
 {
   "title": "Problem Title",
   "description": "Full problem description.",
@@ -74,56 +78,66 @@ Edit
   "topics": ["Array", "Hash Map"],
   "hints": ["Use a dictionary", "Think about complements"]
 }
+```
+
 Add as many problems as you'd like to grow your personal problem set!
 
-🎚️ Adjust Repetition Frequency
+---
+
+### 🎚️ Adjust Repetition Frequency
+
 In the Python script, modify these values to control how often a card repeats:
 
-python
-Copy
-Edit
+```python
 NO_WEIGHT = 5    # For unsolved problems
 YES_WEIGHT = 2   # For solved problems
-🎨 Customize UI
+```
+
+---
+
+### 🎨 Customize UI
+
 Edit the Tkinter GUI section to change:
 
-Fonts, sizes, padding
+- Fonts, sizes, padding
+- Colors (background, buttons)
+- Window size and layout
 
-Colors (background, buttons)
+---
 
-Window size and layout
+## ⚙️ How It Works
 
-⚙️ How It Works
-On startup:
+### On Startup:
 
-Loads problems from lc_flashcards.json.
+- Loads problems from `lc_flashcards.json`.
+- Applies weighting based on prior performance.
+- Loads progress stats from `lc_stats.csv` or starts fresh.
 
-Applies weighting based on prior performance.
+### During Use:
 
-Loads progress stats from lc_stats.csv or starts fresh.
+- Cards are shown in a randomized, weighted order.
+- Clicking **Yes/No** adjusts future appearances of the card.
+- Daily progress is saved automatically.
+- Each day starts a new stats entry for fresh tracking.
 
-During use:
+---
 
-Cards are shown in a randomized, weighted order.
+## 💡 Tips for Best Use
 
-Clicking Yes/No adjusts future appearances of the card.
+- Be honest when marking cards "Solved" or "Unsolved".
+- Make it a daily habit — consistency boosts retention.
+- Study topics you're weak in by reviewing hints and solutions.
+- Add problems you encounter in practice, contests, or interviews.
 
-Daily progress is saved automatically.
+---
 
-Each day starts a new stats entry for fresh tracking.
+## 🤝 Contributing
 
-💡 Tips for Best Use
-Be honest when marking cards "Solved" or "Unsolved".
-
-Make it a daily habit — consistency boosts retention.
-
-Study topics you're weak in by reviewing hints and solutions.
-
-Add problems you encounter in practice, contests, or interviews.
-
-🤝 Contributing
-This is an open-source project inspired by the need for effective LeetCode practice.
+This is an open-source project inspired by the need for effective LeetCode practice.  
 Feel free to fork, improve, and share!
 
-📄 License
+---
+
+## 📄 License
+
 MIT License. Use freely for personal or professional learning.
