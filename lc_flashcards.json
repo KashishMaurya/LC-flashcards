@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Two Sum",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "example": "Input: nums = [2,7,11,15], target = 9\nOutput: [0,1]",
+    "constraints": "2 <= nums.length <= 1e4\n-1e9 <= nums[i], target <= 1e9",
+    "solution": "Use a hash map to store complements.",
+    "lc_number": "1",
+    "level": "Easy",
+    "topics": ["Array", "Hash Table"],
+    "hints": "Can you do it in one pass?"
+  },
+  {
+    "title": "Add Two Numbers",
+    "description": "You are given two non-empty linked lists representing two non-negative integers. Digits are stored in reverse order.",
+    "example": "Input: l1 = [2,4,3], l2 = [5,6,4]\nOutput: [7,0,8]",
+    "constraints": "1 <= l1.length, l2.length <= 100",
+    "solution": "Traverse both lists, add corresponding digits, keep carry.",
+    "lc_number": "2",
+    "level": "Medium",
+    "topics": ["Linked List", "Math"],
+    "hints": "Simulate addition as you do on paper."
+  },
+  {
+    "title": "Longest Substring Without Repeating Characters",
+    "description": "Given a string, find the length of the longest substring without repeating characters.",
+    "example": "Input: s = 'abcabcbb'\nOutput: 3",
+    "constraints": "0 <= s.length <= 5e4",
+    "solution": "Use a sliding window and a hash set.",
+    "lc_number": "3",
+    "level": "Medium",
+    "topics": ["Hash Table", "String", "Sliding Window"],
+    "hints": "Use two pointers to define the window."
+  },
+  {
+    "title": "Valid Parentheses",
+    "description": "Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "example": "Input: s = '()[]{}'\nOutput: true",
+    "constraints": "1 <= s.length <= 1e4",
+    "solution": "Use a stack to match open and closed brackets.",
+    "lc_number": "20",
+    "level": "Easy",
+    "topics": ["String", "Stack"],
+    "hints": "Push open brackets to stack and match with closing ones."
+  },
+  {
+    "title": "Merge Two Sorted Lists",
+    "description": "Merge two sorted linked lists and return it as a sorted list.",
+    "example": "Input: l1 = [1,2,4], l2 = [1,3,4]\nOutput: [1,1,2,3,4,4]",
+    "constraints": "0 <= l1.length, l2.length <= 50",
+    "solution": "Recursively merge by choosing the smaller head node.",
+    "lc_number": "21",
+    "level": "Easy",
+    "topics": ["Linked List", "Recursion"],
+    "hints": "Think recursive and iterative approaches."
+  }
+]
